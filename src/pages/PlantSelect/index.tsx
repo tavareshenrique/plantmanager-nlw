@@ -3,6 +3,8 @@ import { View, Text, StyleSheet, FlatList, ActivityIndicator} from 'react-native
 
 import api from '../../services/api';
 
+import { useNavigation } from '@react-navigation/core';
+
 import { Header } from '../../components/Header';
 import { EnviromentButton } from '../../components/EnviromentButton';
 import { PlantCardPrimary } from '../../components/PlantCardPrimary';
@@ -13,7 +15,11 @@ import fonts from '../../styles/fonts';
 
 import { IEnviromentProps, IPlantProps } from './@interfaces';
 
+export interface PlantProps extends IPlantProps {};
+
 export function PlantSelect() {
+  const navigation = useNavigation();
+
   const [enviroments, setEnviroments] = useState<IEnviromentProps[]>([])
   const [environmentSelected, setEnvironmentSelected] = useState('all');
   const [plants, setPlants] = useState<IPlantProps[]>([]);
@@ -64,6 +70,10 @@ export function PlantSelect() {
     fetchPlants()
   }
 
+  function handlePlantSelect(plant: IPlantProps) {
+    navigation.navigate('PlantSave', { plant });
+  }
+
   useEffect(() => {
     async function fetchEnviroment() {
       const { data } = await api.get('plants_environments?_sort=title&_order=asc');
@@ -104,6 +114,7 @@ export function PlantSelect() {
       <View>
         <FlatList 
           data={enviroments}
+          keyExtractor={(item) => String(item.key)}
           renderItem={({ item }) => (
             <EnviromentButton 
               title={item.title} 
@@ -122,7 +133,10 @@ export function PlantSelect() {
           data={filteredPlants}
           keyExtractor={(item) => String(item.id)}
           renderItem={({ item }) => (
-            <PlantCardPrimary data={item} />
+            <PlantCardPrimary 
+              data={item} 
+              onPress={() => handlePlantSelect(item)}
+            />
           )}
           showsVerticalScrollIndicator={false}
           numColumns={2}
@@ -142,7 +156,7 @@ export function PlantSelect() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: colors.background
+    backgroundColor: colors.background,
   },
   header: {
     paddingHorizontal: 30,
