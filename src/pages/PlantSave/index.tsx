@@ -18,7 +18,7 @@ import { format, isBefore } from "date-fns";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { getStatusBarHeight } from 'react-native-iphone-x-helper';
 
-import { savePlant } from "../../lib/storage";
+import { savePlant } from "../../libs/storage";
 
 import { Button } from "../../components/Button";
 

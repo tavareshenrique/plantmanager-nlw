@@ -20,8 +20,7 @@ export function PlantCardSecondary({ data, handleRemove, ...rest }: IPlantProps)
         <Animated.View>
           <View>
             <RectButton style={styles.buttonRemove} onPress={handleRemove}>
-
-            <Feather name="trash" size={32} color={colors.white} />
+              <Feather name="trash" size={32} color={colors.white} />
             </RectButton>
           </View>
         </Animated.View>

@@ -4,7 +4,7 @@ import { StyleSheet, View, Image, Text, FlatList, Alert } from "react-native";
 import { formatDistance } from "date-fns";
 import { pt } from "date-fns/locale";
 
-import { loadPlant, PlantProps, removePlant } from "../../lib/storage";
+import { loadPlant, PlantProps, removePlant } from "../../libs/storage";
 
 import { Header } from "../../components/Header";
 import { Load } from "../../components/Load";
