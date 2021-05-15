@@ -32,16 +32,12 @@
 - [Autores](#computer-autores)
 - [Licença](#closed_book-licença)
 
-### Fotos
+### Demonstração
 
 <div>
-   <img src="https://j.gifs.com/mqZwo0.gif" width="400px">
-   <img src="https://j.gifs.com/ywP8EW.gif" width="400px">
+  <img src="https://j.gifs.com/mqZwo0.gif" width="400" />
+  <img src="https://j.gifs.com/ywP8EW.gif" width="400" />
 </div>
-
-# :eyes: Demo
-
-👉 Demo: <https://moveit.henriquetavares.com/>
 
 # :computer: Tecnologias
 
