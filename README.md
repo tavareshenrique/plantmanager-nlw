@@ -35,12 +35,8 @@
 ### Fotos
 
 <div>
-   <img src="https://raw.githubusercontent.com/tavareshenrique/plantmanager-nlw/main/public/screenshots/home.png" width="400px">
-   <img src="https://raw.githubusercontent.com/tavareshenrique/plantmanager-nlw/main/public/screenshots/home_time.png" width="400px">
-   <img src="https://raw.githubusercontent.com/tavareshenrique/plantmanager-nlw/main/public/screenshots/challenge.png" width="400px">
-   <img src="https://raw.githubusercontent.com/tavareshenrique/plantmanager-nlw/main/public/screenshots/level.png" width="400px">
-    <img src="https://raw.githubusercontent.com/tavareshenrique/plantmanager-nlw/main/public/screenshots/levelup.png" width="400px">
-   <img src="https://raw.githubusercontent.com/tavareshenrique/plantmanager-nlw/main/public/screenshots/levelupanimate.gif" width="400px">
+   <img src="https://j.gifs.com/mqZwo0.gif" width="400px">
+   <img src="https://j.gifs.com/ywP8EW.gif" width="400px">
 </div>
 
 # :eyes: Demo
@@ -51,34 +47,61 @@
 
 Este projeto foi feito utilizando as seguintes tecnologias:
 
-- [NextJS](https://github.com/vercel/next.js/)
-- [React](https://reactjs.org/)
+- [React Native](https://reactnative.dev/)
+- [Expo](https://expo.io/)
 - [Typescript](https://www.typescriptlang.org/)
 - [Axios](https://github.com/axios/axios)
-- [js-cookie](https://github.com/js-cookie/js-cookie)
-- [react-confetti](https://github.com/alampros/react-confetti#readme)
-- [sweetalert](https://github.com/t4t5/sweetalert)
-- [ESLint](https://github.com/eslint/eslint)
-- [Prettier](https://github.com/prettier/prettier)
+- [date-fns](https://date-fns.org/)
+- [lottie-react-native](https://github.com/lottie-react-native/lottie-react-native)
+- [react-native-svg](https://github.com/react-native-svg/react-native-svg)
+- [react-native-iphone-x-helper](https://github.com/ptelad/react-native-iphone-x-helper)
 
 # :construction_worker: Executando
 
-```bash
-# Clone o Repositório
-$ git@github.com:tavareshenrique/plantmanager-nlw.git
-```
+## 1. Clone o Repositório
 
 ```bash
-# Acesse a pasta do projeto e baixe as dependências
-$ yarn
+git@github.com:tavareshenrique/plantmanager-nlw.git
 ```
+
+## 2. Instale as Dependencias
 
 ```bash
-# Execute
-$ yarn dev
+yarn
 ```
 
-Acesse <http://localhost:3000> para ver o resultado.
+## 3. Acesse o arquivo `api` na pasta `src/services` e altere a `baseURL` para a sua
+
+```javascript
+import axios from 'axios';
+
+const api = axios.create({
+  baseURL: 'http://SUA_URL:3333',
+});
+
+export default api;
+```
+
+## 4. Inicie o Servidor através do JSON Sever
+
+```bash
+yarn server
+```
+
+> 💡 **Observação**
+>
+> Caso não tenha o **JSON Server** instalado ou não saiba o que é, [acesse aqui.](https://github.com/typicode/json-server#getting-started)
+
+## 5. Inicie o Expo
+
+```bash
+expo start
+```
+
+> 💡 **Observação**
+>
+> **_5.1._** É necessário ter o [Expo](https://docs.expo.io/get-started/installation/) instalado.
+> **_5.2._** Ao dar o comando, irá abrir uma página no seu navegador, nessa página você pode escolher por onde executar o App: Emulador Android, Emulador iOS, Celular Android ou iPhone.
 
 # :computer: Autores
 
