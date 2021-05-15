@@ -35,8 +35,8 @@
 ### Demonstração
 
 <div>
-  <img src="https://j.gifs.com/mqZwo0.gif" width="400" />
-  <img src="https://j.gifs.com/ywP8EW.gif" width="400" />
+  <img src="https://github.com/tavareshenrique/plantmanager-nlw/blob/main/src/assets/previews/PM1.gif?raw=true" width="400" />
+  <img src="https://github.com/tavareshenrique/plantmanager-nlw/blob/main/src/assets/previews/PM2.gif?raw=true" width="400" />
 </div>
 
 # :computer: Tecnologias
