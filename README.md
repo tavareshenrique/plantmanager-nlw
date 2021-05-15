@@ -20,7 +20,7 @@
 > <b>PlantManager</b> é um aplicativo desenvolvido utilizando React Native e TypeScript durante a NLW#5 da [Rocketseat](https://github.com/Rocketseat). Esse projeto consiste em ajuda-lo a gerenciar suas plantihas. 🌱💚
 
 <div align="center">
-  <sub>O <strong>MoveIt</strong> foi desenvolvido com 💚 pelo
+  <sub>O <strong>PlantManager</strong> foi desenvolvido com 💚 pelo
     <a href="https://github.com/tavareshenrique">Henrique Tavares</a>
   </sub>
 </div>
